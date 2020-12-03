@@ -8,6 +8,11 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 public class client {
 	public  void client() throws ClassNotFoundException {
 Socket s=null;
@@ -37,6 +42,7 @@ System.out.print(O.getClass().getName());
 
 if(O.getClass().getName()=="java.lang.String") {
 	System.out.print("Saisir la chaine de caractere:");
+	
 	 Scanner lectureClavier = new Scanner(System.in);
 	    O = lectureClavier.nextLine();
 }
