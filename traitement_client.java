@@ -12,8 +12,8 @@ public class traitement_client extends Thread {
     public ArrayList<Object> Liste2=new ArrayList <Object> ();
     int i;
     public Socket client;
-    Integer I = new Integer(3);
-    String S="coucou" ;
+    Integer I = new Integer(0);
+    String S="" ;
     float F = 0;
     
     public traitement_client(Socket client,int indice) 

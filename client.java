@@ -33,30 +33,34 @@ ObjectInputStream objIn = new ObjectInputStream(in);
 
 
 Object O= new Object() ;
+Object Objet_a_envoyer= new Object() ;
 O= objIn.readObject();
 
 System.out.print(O);
 System.out.print(O.getClass().getName());
-
+Interface_graphique Int1=new Interface_graphique();
 
 
 if(O.getClass().getName()=="java.lang.String") {
-	System.out.print("Saisir la chaine de caractere:");
 	
-	 Scanner lectureClavier = new Scanner(System.in);
-	    O = lectureClavier.nextLine();
+	
+	Int1.interface_grapfhique_string();
+	System.out.print(Int1.texte);
+	Objet_a_envoyer=Int1.texte;
+	 
 }
 if(O.getClass().getName()=="java.lang.Integer") {
-	System.out.print("Saisir l'entier:");
-	 Scanner lectureClavier = new Scanner(System.in);
-	    O = lectureClavier.nextLine();
+	
+	Int1.interface_grapfhique_Int();
+	System.out.print(Int1.texte_int);
+	Objet_a_envoyer=Int1.texte_int;
 }
 if(O.getClass().getName()=="java.lang.Float") {
-	System.out.print("Saisir le Reel:");
-	 Scanner lectureClavier = new Scanner(System.in);
-	    O = lectureClavier.nextLine(); 
+	Int1.interface_grapfhique_Float();
+	System.out.print(Int1.texte_float);
+	Objet_a_envoyer=Int1.texte_float;
 }  
-objOut.writeObject(O);
+objOut.writeObject(Objet_a_envoyer);
 
 //objIn.readObject();
 
